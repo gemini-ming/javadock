@@ -3,7 +3,7 @@ module.exports = [
   {
     text: "Java",
     items: [
-      { text: "基础篇", link: "/pages/11aacc/" },
+      { text: "基础篇", link: "/pages/267c97/" },
       { text: "集合篇", link: "/pages/2e780e/" },
       { text: "并发篇", link: "/pages/846d88/" },
       { text: "JVM篇", link: "/pages/562a37/" },
@@ -59,6 +59,8 @@ module.exports = [
       { text: "开发理论", link: "/pages/66669999/" },
       { text: "架构体系", link: "/pages/66669999/" },
       { text: "设计模式", link: "/pages/6ea7eb/" },
+      { text: "业务场景", link: "/pages/66669999/" },
+      { text: "面试题库", link: "/pages/66669999/" },
       { text: "开源知识", link: "/pages/66669999/" },
       
     ]
@@ -123,6 +125,7 @@ module.exports = [
   {
     text: '项目实战',
     items: [
+      { text: "开源项目", link: "/pages/66669999/" },
       { text: "视频网站", link: "/pages/66669999/" },
       { text: "音乐网站", link: "/pages/66669999/" },
       { text: "商城网站", link: "/pages/66669999/" },
@@ -144,6 +147,7 @@ module.exports = [
   {
     text: '程序员英语',
     items: [
+      { text: "Java术语", link: "/pages/afcd59/" },
       { text: "命名英语", link: "/pages/66669999/" },
       { text: "业务英语", link: "/pages/66669999/" },
       { text: "表字段英语", link: "/pages/66669999/" },
