@@ -2,8 +2,9 @@ module.exports = [
   { text: "首页", link: "/" },
   {
     text: "Java",
+    link: "/java/",  // 给 Java 添加一个链接
     items: [
-      { text: "基础篇", link: "/pages/1FaMw/" },
+      { text: "基础篇", link: "/java/se/" },
       { text: "集合篇", link: "/pages/2e780e/" },
       { text: "并发篇", link: "/pages/846d88/" },
       { text: "JVM篇", link: "/pages/562a37/" },
