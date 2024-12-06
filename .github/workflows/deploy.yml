@@ -49,7 +49,7 @@ jobs:
         run: |
           git clone https://x-access-token:${{ secrets.ALL_ACCESS_TOKEN }}@github.com/gemini-ming/gemini-ming.github.io.git b-repo
           cd b-repo
-          git config user.name "gemini"
+          git config user.name "gemini-ming"
           git config user.email "285615204@qq.com"
 
       # Step 7: 替换 B 仓库中的内容
@@ -60,4 +60,4 @@ jobs:
           cd b-repo
           git add .
           git commit -m "Auto deploy from gemini-ming.github.io Repository"
-          git push origin master
+          git push origin main
