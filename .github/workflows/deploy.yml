@@ -1,0 +1,63 @@
+name: Auto Deploy #工作流的名称，GitHub 默认使用文件名（如 deploy.yml）
+
+run-name: Deploy by @${{ github.actor }} #每次执行时显示的工作流运行名称,标记是由哪个用户触发的部署。
+
+on:
+  push:
+    branches:
+      - master # 当推送到 A 仓库的 master 分支时触发
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy to B Repository #任务的名称
+
+    runs-on: ubuntu-latest #指定任务运行的环境，这里使用的是最新的 Ubuntu 系统（ubuntu-latest）。GitHub 提供了多种虚拟机环境，支持 Linux、macOS 和 Windows 等。
+
+    steps: #每个任务中的 steps 是执行的具体步骤,步骤是按顺序执行的
+      # Step 1: 检出 A 仓库的代码
+      - name: Checkout javadock Repository #步骤名称
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # Step 2: 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.20.2'
+
+      # Step 3: 缓存 npm 依赖
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-cache-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-cache-
+
+      # Step 4: 安装 npm 依赖
+      - name: Install dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: npm install
+
+      # Step 5: 运行打包命令
+      - name: Build the project
+        run: npm run docs:build
+
+      # Step 6: 克隆 B 仓库代码
+      - name: Clone gemini-ming.github.io Repository
+        run: |
+          git clone https://x-access-token:${{ secrets.ALL_ACCESS_TOKEN }}@github.com/gemini-ming/gemini-ming.github.io.git b-repo
+          cd b-repo
+          git config user.name "gemini"
+          git config user.email "285615204@qq.com"
+
+      # Step 7: 替换 B 仓库中的内容
+      - name: Deploy dist to gemini-ming.github.io Repository
+        run: |
+          rm -rf b-repo/* # 清空 B 仓库中的所有内容
+          cp -r docs/.vuepress/dist/* b-repo/ # 将 dist 中的文件复制到 B 仓库
+          cd b-repo
+          git add .
+          git commit -m "Auto deploy from gemini-ming.github.io Repository"
+          git push origin master
