@@ -5,7 +5,7 @@ run-name: Deploy by @${{ github.actor }} #每次执行时显示的工作流运�
 on:
   push:
     branches:
-      - master # 当推送到 A 仓库的 master 分支时触发
+      - main # 当推送到 A 仓库的 master 分支时触发
 
 jobs:
   build-and-deploy:
