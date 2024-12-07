@@ -5,11 +5,11 @@ module.exports = [
     link: "/java/",  // 给 Java 添加一个链接
     items: [
       { text: "基础篇", link: "/java/se/" },
-      { text: "集合篇", link: "/pages/2e780e/" },
-      { text: "并发篇", link: "/pages/846d88/" },
-      { text: "JVM篇", link: "/pages/562a37/" },
-      { text: '新特性', link: '/pages/a5d9a6/' },
-      { text: '进阶篇', link: '/pages/66669999/' },
+      { text: "集合篇", link: "/java/collection/" },
+      { text: "并发篇", link: "/java/juc/" },
+      { text: "JVM篇", link: "/java/jvm/" },
+      { text: '新特性', link: '/java/new-features/' },
+      { text: '进阶篇', link: '/java/pro/' },
       
     ]
   },
