@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-deploy:
-    name: Build and Deploy to B Repository #任务的名称
+    name: Build javadock Push gemini-ming.github.io  Repository #任务的名称
 
     runs-on: ubuntu-latest #指定任务运行的环境，这里使用的是最新的 Ubuntu 系统（ubuntu-latest）。GitHub 提供了多种虚拟机环境，支持 Linux、macOS 和 Windows 等。
 
