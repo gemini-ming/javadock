@@ -15,11 +15,12 @@ module.exports = [
   },
   {
     text: "计算机基础",
+    link: "/computer/",// 给 计算机基础 添加一个链接知识体系
     items: [
-      { text: "网络", link: "/pages/7b1cb2/" },
-      { text: "操作系统", link: "/pages/6048a8/" },
-      { text: "数据结构与算法", link: "/pages/3b34ba/" },
-      { text: "硬件", link: "/pages/66669999/" }
+      { text: "网络", link: "/computer/network/" },
+      { text: "操作系统", link: "/computer/system/" },
+      { text: "数据结构与算法", link: "/computer/data/" },
+      { text: "硬件", link: "/computer/hardware/" }
     ]
   },
   {
