@@ -5,7 +5,7 @@ heroText: 泪伤荡的编程指南
 tagline: 學而不思則罔，思而不學則殆🚀
 bannerBg: none
 actionText: 开始阅读 →
-actionLink: /all-catalogue/
+actionLink: /java/
 features:
 - title: 塞缪尔·约翰逊
   details: 知识有两种，一种是你知道的，一种是你知道在哪里能找到的！
