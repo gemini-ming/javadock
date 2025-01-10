@@ -27,6 +27,12 @@ module.exports = {
         [
             'meta',
             {
+              name: 'google-site-verification',
+              content: "0AaTKqfC38--lcwnJiAfnFDCvpEHJK1hyIMxchcbVt0"
+            }
+       ],[
+            'meta',
+            {
               name: 'keywords',
               content: "编程分享, 开发, 程序员, Java, 计算机, IT, 八股"
             }
