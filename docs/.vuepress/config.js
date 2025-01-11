@@ -211,7 +211,7 @@ module.exports = {
         [
             "sitemap",
             {
-                hostname: domain,
+                hostname: "https://gemini-ming.github.io",
             },
         ],
         // 配置RSS订阅
